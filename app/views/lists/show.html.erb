@@ -1,1 +1,23 @@
-<h1><%= @list.name %></h1>
+<div class="page my-4">
+  <h1><%= @list.name %></h1>
+  <div class="cards">
+    <% @bookmarks.each do |bookmark| %>
+    <div class="card-trip my-4">
+      <img src=<%= bookmark.movie.poster_url %> />
+      <div class="card-trip-infos">
+        <div>
+          <h2 class="my-2"><%= bookmark.movie.title %> - <em><%= bookmark.movie.rating %></em></h2>
+          <p><%= bookmark.movie.overview %></p>
+        </div>
+      </div>
+      <div class="card-trip-bottom">
+        <p><i class="fas fa-quote-right"></i> <%= bookmark.comment %></p>
+        <%= link_to bookmark_path(bookmark), method: :delete do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <button class="btn btn-light"><%= link_to "New bookmark", new_list_bookmark_path(@list) %></button>
+</div>
