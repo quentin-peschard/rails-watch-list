@@ -1,5 +1,10 @@
-<div class="page my-4">
-  <h1><%= @list.name %></h1>
+<div class="banner" content="width=device-width, initial-scale=1" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://source.unsplash.com/1600x900/?dark);">
+  <div class="container">
+    <h1><%= @list.name %></h1>
+    <button class="btn"><%= link_to 'Add a movie', new_list_bookmark_path(@list) %></button>
+  </div>
+</div>
+<div class="container">
   <div class="cards">
     <% @bookmarks.each do |bookmark| %>
     <div class="card-trip my-4">
@@ -19,5 +24,4 @@
     </div>
     <% end %>
   </div>
-  <button class="btn btn-light"><%= link_to "New bookmark", new_list_bookmark_path(@list) %></button>
 </div>
