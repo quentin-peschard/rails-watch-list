@@ -6,7 +6,7 @@
 <div class="container my-4">
   <div class="cards">
     <% @lists.each do |list| %>
-      <div class="card-category my-4" style="background-image: url('<%= cl_image_path list.photo.key %>')">
+      <div class="card-category my-4" style="background-image: url('<%= cl_image_tag list.photo.key %>')">
           <%= link_to '+', list_path(list), method: 'delete', class: "p" %>
         <h2><%= link_to list.name, list_path(list) %></h2>
       </div>
