@@ -12,9 +12,9 @@
 
   <body>
   <div class="navbar navbar-expand-sm navbar-light sticky-top navbar-lewagon">
-  <a class="navbar-brand" href="#">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
-</a>
+    <a href="https://quentin-watch-list.herokuapp.com/lists/">
+      <h1>⏣</h1>
+    </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -29,7 +29,7 @@
         <%= link_to 'Add a list', new_list_path, class: "nav-link"  %>
       </li>
       <li class="nav-item dropdown">
-        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://source.unsplash.com/random/200x200" />
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://source.unsplash.com/random/200x200/?avatar" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
@@ -38,8 +38,6 @@
     </ul>
   </div>
 </div>
-    <%# <div class="container"> %>
     <%= yield %>
-    <%# </div> %>
   </body>
 </html>
